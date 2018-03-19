@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <table>
+        <tr>
+            <td>
+                <p>Автор</p>
+            </td>
+            <td>
+                <p>Дата заявки</p>
+            </td>
+            <td>
+                <p>Назавние системы</p>
+            </td>
+        </tr>
+        @foreach (var item in ViewBag.Requests)
+        {
+            <tr>
+                <td><p>@item.Author</p></td>
+                <td><p>@item.CreateDate</p></td>
+                <td><p>@item.ISName</p></td>
+                <td><p><a href="/Home/Buy/@item.Id">Редактировать</a></p></td>
+            </tr>
+        }
+    </table>
+</div>
