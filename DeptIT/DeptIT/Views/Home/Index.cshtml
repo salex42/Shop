@@ -1,8 +1,43 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
 }
 
 <div>
+    <h3> Количество заказов: @ViewData["cnt"]</h3>
+    <h3> Client name: @ViewBag.Client</h3>
+    <div class="row">
+        <div class="col-md-3">
+            <p>Автор</p>
+        </div>
+        <div class="col-md-1">
+            <p>Дата заявки</p>
+        </div>
+        <div class="col-md-2">
+            <p>Назавние системы</p>
+        </div>
+        <div class="col-md-1">
+            <p>Действие</p>
+        </div>
+    </div>
+    @foreach (var item in ViewBag.Products)
+    {
+        <div class="row">
+            <div class="col-md-3">
+                <p>@item.Name</p>
+            </div>
+            <div class="col-md-1">
+                <p>@item.Cost</p>
+            </div>
+            <div class="col-md-2">
+                <p>@item.Type</p>
+            </div>
+            <div class="col-md-1">
+                <p><a href="/Home/Buy/@item.Id">Редактировать</a></p>
+            </div>
+        </div>
+    }
+    <br />
     <table>
         <tr>
             <td>
@@ -15,14 +50,15 @@
                 <p>Назавние системы</p>
             </td>
         </tr>
-        @foreach (var item in ViewBag.Requests)
+        @foreach (var item in ViewBag.Products)
         {
             <tr>
-                <td><p>@item.Author</p></td>
-                <td><p>@item.CreateDate</p></td>
-                <td><p>@item.ISName</p></td>
+                <td></td>
+                <td><p>@item.Cost</p></td>
+                <td><p>@item.Type</p></td>
                 <td><p><a href="/Home/Buy/@item.Id">Редактировать</a></p></td>
             </tr>
         }
     </table>
 </div>
+
