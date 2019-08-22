@@ -302,3 +302,4 @@ C:\Work\Projects\MVC\1\DeptIT\DeptIT\obj\Debug\DeptIT.csproj.CopyComplete
 C:\Work\Projects\MVC\1\DeptIT\DeptIT\obj\Debug\DeptIT.dll
 C:\Work\Projects\MVC\1\DeptIT\DeptIT\obj\Debug\DeptIT.pdb
 C:\Work\Projects\MVC\1\DeptIT\DeptIT\obj\Debug\DeptIT.csprojResolveAssemblyReference.cache
+c:\Work\Projects\GitHub\Shop\DeptIT\DeptIT\obj\Debug\DeptIT.csprojAssemblyReference.cache
